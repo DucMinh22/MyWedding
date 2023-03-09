@@ -1,6 +1,6 @@
 import React from 'react'
 import Bride from '../assets/images/co-dau.jpg'
-import Groom from '../assets/images/chu-re.JPG'
+import Groom from '../assets/images/chu-re.jpg'
 function Bridegroom () {
   return (
     <div id='couple' className='bridegroom clear section-padding bg-pink'>
