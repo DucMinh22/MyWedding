@@ -880,7 +880,7 @@ body.slide .oliven-nav-toggle {
         background-position: center center;
     }
     .header .caption h1 {
-        font-size: 40px;
+        font-size: 32px;
     }
     .header .caption h5 {
         font-size: 12px;
@@ -1391,8 +1391,13 @@ body.slide .oliven-nav-toggle {
 
 
 /* ===== When & Where style ===== */
-.whenwhere .item {
+.whenwhere .content h5 {
+    text-align: center;
+}
 
+.whenwhere .content p {
+    font-weight: bold;
+    color: #BD945A;
 }
 .whenwhere .item .whenwhere-img {
     position: relative;

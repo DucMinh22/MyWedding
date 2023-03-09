@@ -1,6 +1,6 @@
 import React from 'react'
 import Bride from '../assets/images/co-dau.jpg'
-import Groom from '../assets/images/chu-re.jpg'
+import Groom from '../assets/images/chu-re.JPG'
 function Bridegroom () {
   return (
     <div id='couple' className='bridegroom clear section-padding bg-pink'>
@@ -22,9 +22,7 @@ function Bridegroom () {
                   </h6>{' '}
                   <span>Cô Dâu</span>
                   <p>
-                    Olivia fringilla dui at elit finibus viverra nec a lacus
-                    seda themo the miss druane semper sollicitudin non the
-                    fermen.
+                    Số nhà 270-Lý Thường Kiệt-P.Thị Cầu-TP.Bắc Ninh
                   </p>
                   <div className='social'>
                     <div className='full-width'>
@@ -62,9 +60,7 @@ function Bridegroom () {
                   </h6>{' '}
                   <span>Chú Rể</span>
                   <p>
-                    Enrico fringilla dui at elit finibus viverra nec a lacus
-                    seda themo the miss druane semper sollicitudin non the
-                    fermen.
+                    Xã Văn Lung-Khu An Ninh Hạ-TX.Phú Thọ-Phú Thọ
                   </p>
                   <div className='social'>
                     <div className='full-width'>

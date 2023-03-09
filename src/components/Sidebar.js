@@ -36,9 +36,6 @@ function Sidebar () {
               <a href='#story'>Our Story</a>
             </li>
             <li>
-              <a href='#organization'>Organization</a>
-            </li>
-            <li>
               <a href='#gallery'>Gallery</a>
             </li>
             <li>
