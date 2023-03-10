@@ -885,6 +885,9 @@ body.slide .oliven-nav-toggle {
     .header .caption h5 {
         font-size: 12px;
     }
+    .footer2 h2 span {
+        font-size: 30px;
+    }
 }
 /* bounce */
 .header .arrow {

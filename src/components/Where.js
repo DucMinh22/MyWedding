@@ -42,7 +42,7 @@ function Where () {
               </p>
               <p  style={{textAlign: 'center'}}>
                 <i className='ti-time'></i> <h3>Thời gian: 11h00'</h3>
-                <h3>THỨ BẢY 02.04.2023</h3>
+                <h3>CHỦ NHẬT 02.04.2023</h3>
               </p>
             </div>
           </div>
@@ -58,7 +58,7 @@ function Where () {
               </p>
               <p  style={{textAlign: 'center'}}>
                 <i className='ti-time'></i> <h3>Thời gian: 11h00'</h3>
-                <h3>THỨ BẢY 02.04.2023</h3>
+                <h3>CHỦ NHẬT 02.04.2023</h3>
               </p>
             </div>
           </div>
