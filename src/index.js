@@ -3,10 +3,17 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {BrowserRouter, Route, Routes } from 'react-router-dom'
+import TableOfUsers from './components/TableOfUsers';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+     <BrowserRouter>
+        <Routes>
+            <Route exact  path="/" element={<App/>} />
+            <Route exact  path="/list-friends" element={<TableOfUsers/>} />
+        </Routes>
+      </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('oliven-page')
 );

@@ -1,6 +1,30 @@
-import React from 'react'
+import {useState } from "react";
+import { useForm } from "react-hook-form";
 
 function RSVP () {
+  const [selected, setSelected] = useState('yes');
+  const { register, handleSubmit, formState: { errors }, reset } = useForm();
+
+  const onSubmit = (data) => {
+    AddTask(data)
+    reset();
+  };
+
+  const AddTask = async (newUser) => {
+    const res = await fetch('http://localhost:5000/users-array', 
+    {
+      method: 'POST',
+      headers: {
+        'Content-type': 'application/json'
+      },
+      body:JSON.stringify(newUser)
+    })
+    await res.json()
+  }
+
+  const handleChange = event => {
+    setSelected(event.target.value);
+  };
   return (
     <div
       id='rsvp'
@@ -12,48 +36,41 @@ function RSVP () {
             {' '}
             <span className='oliven-title-meta text-center'>Đến với chúng mình nha!</span>
             <br />
-            <form method='post' className='row'>
-              <div className='col-md-12'>
-                <div className='form-group'>
-                  <input
-                    type='text'
-                    className='form-control'
-                    placeholder='Name'
-                    required
-                  />{' '}
+      
+            <form onSubmit={handleSubmit(onSubmit)}>
+                <input placeholder="Tên" type='text' {...register("name")} />
+                
+                <input placeholder="Đi cùng file đính kèm VD: người yêu"  type='text' {...register("guests")} />
+                {errors.exampleRequired && <span>This field is required</span>}
+
+                <div style={{ display: 'flex', alignItems: 'center', margin: '25px 5px'}}>
+                    <div style={{width: '50%'}}>
+                        <input
+                            type="radio"
+                            id="yes"
+                            name="choose"
+                            value="yes"
+                            {...register("accepted")}
+                            checked={selected === 'yes'}
+                            onChange={handleChange}
+                        />
+                        <label htmlFor="yes">Mình sẽ tới nha</label>
+                    </div>
+                    <div style={{width: '50%'}}>
+                        <input
+                            type="radio"
+                            id="no"
+                            name="choose"
+                            value="no"
+                            {...register("accepted")}
+                            onChange={handleChange}
+                            checked={selected === 'no'}
+                        />
+                    <label htmlFor="no">Mình không tới được</label>
+                    </div>
                 </div>
-              </div>
-              <div className='col-md-12'>
-                <div className='form-group'>
-                  <input type='text' className='form-control' placeholder='Email' />{' '}
-                </div>
-              </div>
-              <div className='col-md-12'>
-                <div className='form-group'>
-                  <input
-                    type='text'
-                    className='form-control'
-                    placeholder='Guests'
-                  />{' '}
-                </div>
-              </div>
-              <div className='col-md-12'>
-                <div className='form-group'>
-                  <textarea
-                    name='message'
-                    id='message'
-                    cols='30'
-                    rows='7'
-                    className='form-control'
-                    placeholder='Message'
-                  ></textarea>
-                </div>
-              </div>
-              <div className='col-md-12'>
-                <div className='form-group'>
-                  <input type='submit' className='btn buttono' value='SEND' />{' '}
-                </div>
-              </div>
+                
+                <input type='submit' className='btn buttono' value='SEND' />
             </form>
           </div>
         </div>
