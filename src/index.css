@@ -873,7 +873,7 @@ body.slide .oliven-nav-toggle {
     color: #fff;
 }
 .header.parallaxie {
-  background-image: url(./assets/images/anh-bia.jpg);
+  background-image: url(./assets/images/anh-bia.webp);
 }
 @media screen and (max-width: 991px) {
     .header {
@@ -1069,7 +1069,7 @@ body.slide .oliven-nav-toggle {
 /* ======= Wedding Countdown style ======= */
 #countdown {
     text-align: center;
-    background-image: url(./assets/images/banner-1.jpg);
+    /* background-image: url(./assets/images/banner-1.jpg); */
 }
 #countdown .section-head {
     margin-bottom: 15px;
@@ -1223,7 +1223,7 @@ body.slide .oliven-nav-toggle {
 /* ===== Organization style  ===== */
 .organization .bord-box {
   overflow: hidden;
-  background-image: url(./assets/images/slider.jpg);
+  /* background-image: url(./assets/images/slider.jpg); */
 }
 .organization .item-box {
   padding: 60px 30px;
@@ -1288,7 +1288,7 @@ body.slide .oliven-nav-toggle {
 
 /* ======= See You style ======= */
 .seeyou {
-  background-image: url(./assets/images/nhan-cuoi.JPG);
+  background-image: url(./assets/images/nhan-cuoi.webp);
 }
 .seeyou .section-head span {
     color: #fff;
@@ -1546,7 +1546,7 @@ body.slide .oliven-nav-toggle {
 
 /* ===== Footer style ===== */
 #rsvp {
-    background-image: url(./assets/images/anh-form.JPG);
+    background-image: url(./assets/images/anh-form.webp);
 }
 .footer2 {
     padding: 90px 30px;

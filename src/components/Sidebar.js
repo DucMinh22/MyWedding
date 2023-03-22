@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Logo from '../assets/images/logo.png'
+import { NavLink } from "react-router-dom";
 function Sidebar () {
   const [show, setShow] = useState(false);
 
@@ -44,6 +45,9 @@ function Sidebar () {
             <li>
               <a href='#rsvp'>R.S.V.P</a>
             </li>
+            <NavLink to="/list-friends" >
+              List friends
+            </NavLink>
           </ul>
         </nav>
         <div className='footer1'>

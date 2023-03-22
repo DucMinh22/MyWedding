@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter, Route, Routes } from 'react-router-dom'
 import TableOfUsers from './components/TableOfUsers';
+import Thankyou from './components/Thankyou';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -12,6 +13,7 @@ ReactDOM.render(
         <Routes>
             <Route exact  path="/" element={<App/>} />
             <Route exact  path="/list-friends" element={<TableOfUsers/>} />
+            <Route exact  path="/thank-you" element={<Thankyou/>} />
         </Routes>
       </BrowserRouter>
   </React.StrictMode>,

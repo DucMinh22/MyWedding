@@ -1,13 +1,16 @@
 import {useState } from "react";
 import { useForm } from "react-hook-form";
+import { useNavigate } from 'react-router-dom';
 
 function RSVP () {
   const [selected, setSelected] = useState('yes');
   const { register, handleSubmit, formState: { errors }, reset } = useForm();
+  const navigate = useNavigate();
 
   const onSubmit = (data) => {
     AddTask(data)
     reset();
+    navigate("/thank-you");
   };
 
   const AddTask = async (newUser) => {
@@ -38,10 +41,10 @@ function RSVP () {
             <br />
       
             <form onSubmit={handleSubmit(onSubmit)}>
-                <input placeholder="Tên" type='text' {...register("name")} />
-                
-                <input placeholder="Đi cùng file đính kèm VD: người yêu"  type='text' {...register("guests")} />
-                {errors.exampleRequired && <span>This field is required</span>}
+                <input placeholder="Tên" type='text' {...register("name", { required: true })} />
+                {errors.name && <span style={{ color: 'red' }}>This field is required</span>}
+                <input placeholder="Đi cùng file đính kèm VD: người yêu"  type='text' {...register("guests", { required: true })} />
+                {errors.guests && <span style={{ color: 'red' }}>This field is required</span>}
 
                 <div style={{ display: 'flex', alignItems: 'center', margin: '25px 5px'}}>
                     <div style={{width: '50%'}}>

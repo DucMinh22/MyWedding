@@ -1,10 +1,22 @@
 {
   "users-array": [
     {
-      "name": "Hạnh",
+      "name": "Bình",
+      "guests": "nguoi iu",
+      "accepted": "no",
+      "id": 3
+    },
+    {
+      "name": "Trang thúi",
       "guests": "nguoi iu",
       "accepted": "yes",
-      "id": 1
+      "id": 4
+    },
+    {
+      "name": "Linh",
+      "guests": "nguoi iu",
+      "accepted": "yes",
+      "id": 5
     }
   ]
 }
